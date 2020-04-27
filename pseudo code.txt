@@ -1,0 +1,8 @@
+Pseudo Code Unit 4 Game
+
+1. Need to randomly set numbers between 19 and 120 for guesses
+2. Need to set nombers between 1-12 for crystals (maybe set up as objects?)
+3. Set conditions for win. For example: if score === guesses win!
+4. Set conditions for lose. If score < guess lose!
+5. Set on clicks for crystals
+6. May make each cristal have a counter in the onclick
