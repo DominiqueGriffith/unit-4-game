@@ -1,99 +1,162 @@
-  <!DOCTYPE html>
-  <html lang="en">
-  <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <script type="text/javascript" src=assets/javascript/game.js></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-      <title>Crystals Collector</title>
-  </head>
-  <body>
-    <div class="jumbotron jumbotron-fluid bg-warning">
-      <div class="container">
-        <h1 class="display-4">Crytals Collector</h1>
-        <p class="lead">Wins:0 Losses:0</p>
-      </div>
-    </div>
-    
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="text/javascript" src=assets/javascript/game.js></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <title>Crystals Collector</title>
+</head>
+
+<body id="game">
+  <div class="jumbotron jumbotron-fluid bg-warning">
     <div class="container">
+      <h1 class="display-4">Crytals Collector</h1>
+      <p class="lead">Wins:0 Losses:0</p>
+    </div>
+  </div>
 
-      <div class="row">
+  <div class="container">
 
-          <div class="col-md-12">
+    <div class="row">
 
-              <h2 class="text-center">39</h2>
+      <div class="col-md-12">
 
-          </div>
-
-      </div>
-
-      </div>
-     
-      <div class="row">
-
-        <div class="col-md-4">
-
-    <div class="card text-white bg-danger mb-3" style="max-width: 50rem;"> 
-      <div class="card-body">
-        <h5 class="card-title">Instructions</h5>
-        <p class="card-text">You will be given a random number at the start of the game.</p>
-        <p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</p>
-        <p>You win the game by matching your total score to random number, you lose the game if your total score goes above the random number.</p>
-        <p>The vale of each crystal is hidden from you until you click on it.</p>
-        <p>Each time when the game starts, the game will change the values of each crystal</p>
-      </div>
+        <h2 class="text-center">39</h2>
 
       </div>
-     
 
+    </div>
+
+  </div>
+
+  <div class="row">
+
+    <div class="col-md-4">
+
+      <div class="card text-white bg-danger mb-3" style="max-width: 50rem;">
+        <div class="card-body">
+          <h5 class="card-title">Instructions</h5>
+          <p class="card-text">You will be given a random number at the start of the game.</p>
+          <p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your
+            total score.</p>
+          <p>You win the game by matching your total score to random number, you lose the game if your total score goes
+            above the random number.</p>
+          <p>The vale of each crystal is hidden from you until you click on it.</p>
+          <p>Each time when the game starts, the game will change the values of each crystal</p>
         </div>
 
-      <div class="col-md-2">
-
-        <img id="redcrystal" src=assets/images/redcrystal.jpg width="200px" height="200px">
       </div>
 
-      <div class="col-md-2">
 
-        <img id="yellowcrystal" src=assets/images/yellowcrystal.jpg width="200px" height="200px">
-      </div>
+    </div>
 
-      <div class="col-md-2">
-        <img id="greencrystal" src=assets/images/greencrystal.jpg width="200px" height="200px">
+    <div class="col-md-2">
 
-      </div>
-      <div class="col-md-2">
-        <img id="bluecrystal" src=assets/images/bluecrystal.jpg width="200px" height="200px">
+      <img id="redcrystal" style="cursor: pointer" src=assets/images/redcrystal.jpg width="200px" height="200px">
+    </div>
 
+    <div class="col-md-2">
 
-      </div>
+      <img id="yellowcrystal" style="cursor: pointer" src=assets/images/yellowcrystal.jpg width="200px" height="200px">
+    </div>
 
-      </div>
+    <div class="col-md-2">
+      <img id="greencrystal" style="cursor: pointer" src=assets/images/greencrystal.jpg width="200px" height="200px">
 
-<div class="row">
-
-          <div class="col-md-12">
-
-              <h2 class="text-center">Your score 0</h2>
-
-          </div>
-
-      
-
-      
+    </div>
+    <div class="col-md-2">
+      <img id="bluecrystal" style="cursor: pointer" src=assets/images/bluecrystal.jpg width="200px" height="200px">
 
 
-      </div>
+    </div>
+
+  </div>
+
+  <div class="row">
+
+    <div class="col-md-12">
+
+      <h2 class="text-center">Your score 0</h2>
+
+    </div>
+
+
+
+
+
+
+  </div>
+
+
+
+
+
+  <br>
+  <script type="text/javascript">
+
+    // red 
+    $("#redcrystal").on("click", function () {
+      counter += randomCrystalOne;
+      alert("Your new score is " + counter + " points")
+
+      if (counter === randomNums) {
+        alert("You win!");
+      }
+
+      else if (counter >= randomNums) {
+        alert("You lose!");
+      }
+    });
+
+    // yellow
+    $("#yellowcrystal").on("click", function () {
+      counter += randomCrystalTwo;
+      alert("Your new score is " + counter + " points")
+
+      if (counter === randomNums) {
+        alert("You win!");
+      }
+
+      else if (counter >= randomNums) {
+        alert("You lose!");
+      }
+      });
+    // green
+    $("#greencrystal").on("click", function () {
+      counter += randomCrystalThree;
+      alert("Your new score is " + counter + " points")
+
+      if (counter === randomNums) {
+        alert("You win!");
+      }
+
+      else if (counter >= randomNums) {
+        alert("You lose!");
+      }
+      });
+
+    // bluee 
+    $("#bluecrystal").on("click", function () {
+      counter += randomCrystalFour;
+      alert("Your new score is " + counter + " points")
+
+      if (counter === randomNums) {
+        alert("You win!");
+      }
+
+      else if (counter >= randomNums) {
+        alert("You lose!");
+      }
+      });
 
      
 
-      
+  </script>
 
-     <br>
 
-    
+</body>
 
-      
-  </body>
-  </html>
+</html>
