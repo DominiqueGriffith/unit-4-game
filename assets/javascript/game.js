@@ -26,6 +26,10 @@ function reset() {
   game = document.getElementsByClassName('dynamic');
   game[1].textContent = randomNums;
   game[2].textContent = 'Your Socre: ' + counter;
+  randomCrystalOne = numCrystals.crystalOne[Math.floor(Math.random() * numCrystals.crystalOne.length++)];
+  randomCrystalTwo = numCrystals.crystalTwo[Math.floor(Math.random() * numCrystals.crystalTwo.length++)];
+  randomCrystalThree = numCrystals.crystalThree[Math.floor(Math.random() * numCrystals.crystalThree.length++)];
+  randomCrystalFour = numCrystals.crystalFour[Math.floor(Math.random() * numCrystals.crystalFour.length++)];
 }
 
 
