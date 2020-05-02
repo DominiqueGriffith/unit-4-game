@@ -4,17 +4,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script type="text/javascript" src=assets/javascript/game.js></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+ 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <title>Crystals Collector</title>
 </head>
 
-<body id="game">
+<body>
   <div class="jumbotron jumbotron-fluid bg-warning">
     <div class="container">
       <h1 class="display-4">Crytals Collector</h1>
-      <p class="lead">Wins:0 Losses:0</p>
+      <p  class="lead dynamic">Wins:0 Losses:0</p>
     </div>
   </div>
 
@@ -24,7 +23,7 @@
 
       <div class="col-md-12">
 
-        <h2 class="text-center">39</h2>
+        <h2 class="text-center dynamic">39</h2>
 
       </div>
 
@@ -79,7 +78,7 @@
 
     <div class="col-md-12">
 
-      <h2 class="text-center">Your score 0</h2>
+      <h2 class="text-center dynamic">Your score 0</h2>
 
     </div>
 
@@ -95,66 +94,14 @@
 
 
   <br>
-  <script type="text/javascript">
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src=assets/javascript/game.js></script>
 
-    // red 
-    $("#redcrystal").on("click", function () {
-      counter += randomCrystalOne;
-      alert("Your new score is " + counter + " points")
-
-      if (counter === randomNums) {
-        alert("You win!");
-      }
-
-      else if (counter >= randomNums) {
-        alert("You lose!");
-      }
-    });
-
-    // yellow
-    $("#yellowcrystal").on("click", function () {
-      counter += randomCrystalTwo;
-      alert("Your new score is " + counter + " points")
-
-      if (counter === randomNums) {
-        alert("You win!");
-      }
-
-      else if (counter >= randomNums) {
-        alert("You lose!");
-      }
-      });
-    // green
-    $("#greencrystal").on("click", function () {
-      counter += randomCrystalThree;
-      alert("Your new score is " + counter + " points")
-
-      if (counter === randomNums) {
-        alert("You win!");
-      }
-
-      else if (counter >= randomNums) {
-        alert("You lose!");
-      }
-      });
-
-    // bluee 
-    $("#bluecrystal").on("click", function () {
-      counter += randomCrystalFour;
-      alert("Your new score is " + counter + " points")
-
-      if (counter === randomNums) {
-        alert("You win!");
-      }
-
-      else if (counter >= randomNums) {
-        alert("You lose!");
-      }
-      });
-
+    
      
 
-  </script>
+  
 
 
 </body>

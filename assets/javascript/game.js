@@ -12,9 +12,13 @@ var numCrystals = {
 
 }
 
+
 var counter = 0;
 var wins = 0;
 var losses = 0;
+
+
+
 
 // Randomizes the array of numbers the user has to guess
 var randomNums = numGuess[Math.floor(Math.random() * numGuess.length)];
@@ -34,13 +38,84 @@ var randomCrystalThree = numCrystals.crystalThree[Math.floor(Math.random() * num
 var randomCrystalFour = numCrystals.crystalFour[Math.floor(Math.random() * numCrystals.crystalFour.length)];
 // console.log(randomCrystalFour)
 
-var html = "<h1>Crytals Collector</h1>" +
-"<p>Wins: " + wins + "Losses: " + losses 
-"<h2>" + randomNums + "</h2>";
 
 
-document.querySelector("#game").innerHTML = html;
-console.log(html);
+ // red 
+ $("#redcrystal").on("click", function () {
+    counter += randomCrystalOne;
+    game[2].textContent = 'Your Socre: ' + counter;
+    // alert("Your new score is " + counter + " points")
+
+    if (counter === randomNums) {
+      alert("You win!");
+    }
+
+    else if (counter >= randomNums) {
+      alert("You lose!");
+    }
+  });
+
+  // yellow
+  $("#yellowcrystal").on("click", function () {
+    counter += randomCrystalTwo;
+    game[2].textContent = 'Your Socre: ' + counter;
+    // alert("Your new score is " + counter + " points")
+
+    if (counter === randomNums) {
+      alert("You win!");
+    }
+
+    else if (counter >= randomNums) {
+      alert("You lose!");
+    }
+    });
+  // green
+  $("#greencrystal").on("click", function () {
+    counter += randomCrystalThree;
+    game[2].textContent = 'Your Socre: ' + counter;
+    // alert("Your new score is " + counter + " points")
+
+    if (counter === randomNums) {
+      alert("You win!");
+    }
+
+    else if (counter >= randomNums) {
+      alert("You lose!");
+    }
+    });
+
+  // blue
+  $("#bluecrystal").on("click", function () {
+    counter += randomCrystalFour;
+    game[2].textContent = 'Your Socre: ' + counter;
+    // alert("Your new score is " + counter + " points")
+
+    if (counter === randomNums) {
+      alert("You win!");
+    }
+
+    else if (counter >= randomNums) {
+      alert("You lose!");
+    }
+
+  
+
+    });
+
+  
+
+    var game = document.getElementsByClassName('dynamic');
+    console.log(game);
+    game[0].textContent = 'Wins: ' +  wins +  ' Losses: ' +  losses;
+    game[1].textContent = randomNums;
+    
+   
+
+    
+ 
+
+ 
+
 
 
 
